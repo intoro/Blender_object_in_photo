@@ -1,0 +1,1 @@
+Using the principle shader and denoiser. blender 2.79. shadows, seeing through the glass cup , and the caustics on the cup all make the image look real.
