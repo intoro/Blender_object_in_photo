@@ -1,1 +1,43 @@
 Using the principle shader and denoiser. blender 2.79. shadows, seeing through the glass cup , and the caustics on the cup all make the image look real.
+
+set to cycles renderer
+using a cup created earlier, remove everything except the cup.
+press 0 on the numpad for camera view
+in the n panel check the background image box and open your chosen background
+set the axis to camera, increase the opacity to 1
+switch to the render panel and match the resolution with the resolution of the opened image
+select the camera and adjust the focal length
+move and pan the objects to match the background
+make a plane, shift + a mesh > plane.
+scale by pressing s then 10
+press 1 on the numpad and move the plane under the cup objects
+press 5 to get back to camera view
+with the plane selected add a new material
+keep the default diffuse texture. click the small circle next to color and select image texture
+open the same image as the background
+with the plane still selected hit tab to enter edit mode.
+add some geometry by selecting subdivide in the tool panel on the left.
+then press u to unwrap the plane and select project from view
+you will see the background image lined up with the plane image
+hit tab to go back to object mode
+save your file
+When rendering you will not be able to see the background image, it is just a reference for now.
+While the plane image and background image are visible is a good time to match the lighting.
+switch to rendered view, Under the rendering tab under film check the transparent box and the background image shall appear
+select one cup and select principal shader as the material
+set the transmission to 1 to make the cup glass
+select the lamp and set it to sun at a strength of 5 to begin with
+a larger lamp size will make a softer shadow I used .3
+select the object tab,
+the shadow direction and size are controlled by the Rotation values
+Go back to adjusting the strength of the light to match the reference picture
+Now select the plane while in camera view, 0 on the numpad
+press s to scale big enough to fill in the total visible background
+If the perspective of the camera does not allow for the plane to fully cover the background tab into edit mode with the plane selected
+From the tool plane subdivide a few more times till you have the plane divided into small squares.
+Turn on proportional editing and set its proportional drop off to sharp
+hold down alt and right click a subdivision going from left to right near the far end of the plane
+click g and pull the edge up covering the background, use the scroll wheel to smooth out the transition.
+Once the background is covered by the plane hit a twice selecting the whole plane
+press u and select project from view
+now you can render the image, I chose a sample rate of 1170 and checked the denoise box under the layers tab
